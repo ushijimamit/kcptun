@@ -1,0 +1,14 @@
+package: kcptun/client
+import:
+- package: github.com/golang/snappy
+- package: github.com/pkg/errors
+  version: ~0.8.0
+- package: github.com/urfave/cli
+  version: ~1.20.0
+- package: github.com/xtaci/kcp-go
+  version: ~3.23.0
+- package: github.com/xtaci/smux
+  version: ~1.0.6
+- package: golang.org/x/crypto
+  subpackages:
+  - pbkdf2
