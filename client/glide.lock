@@ -1,5 +1,5 @@
 hash: 097c7e92e99d83731080ac757fd0be92e3511d24f5c000654b524654ccc913c1
-updated: 2018-01-30T17:44:26.990779092+08:00
+updated: 2018-03-07T21:35:32.703088905+08:00
 imports:
 - name: github.com/golang/snappy
   version: 553a641470496b2327abcac10b36396bd98e45c9
@@ -22,9 +22,9 @@ imports:
 - name: github.com/xtaci/kcp-go
   version: 86eebd5cadb519b7c9306082c7eb3bcee2c49a7b
 - name: github.com/xtaci/smux
-  version: ebec7ef2574b42a7088cd7751176483e0a27d458
+  version: e28719eede1ac5714cf0b06ba2f403125864ebe0
 - name: golang.org/x/crypto
-  version: 558b6879de74bc843225cde5686419267ff707ca
+  version: 85f98707c97e11569271e4d9b3d397e079c4f4d0
   subpackages:
   - blowfish
   - cast5
@@ -35,7 +35,7 @@ imports:
   - twofish
   - xtea
 - name: golang.org/x/net
-  version: 0ed95abb35c445290478a5348a7b38bb154135fd
+  version: d25186b37f34ebdbbea8f488ef055638dfab272d
   subpackages:
   - bpf
   - internal/iana
