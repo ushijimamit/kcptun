@@ -1,5 +1,5 @@
 hash: 199c2919620f7260fe1c42a2f6b1051405b3dbabdb1d235e6d61a5a5b2619066
-updated: 2018-03-07T21:36:50.294149092+08:00
+updated: 2018-03-08T11:01:14.967570304+08:00
 imports:
 - name: github.com/golang/snappy
   version: 553a641470496b2327abcac10b36396bd98e45c9
@@ -35,7 +35,7 @@ imports:
   - twofish
   - xtea
 - name: golang.org/x/net
-  version: d25186b37f34ebdbbea8f488ef055638dfab272d
+  version: 07e8617a6db2368fa55d4616f371ee1b1403c817
   subpackages:
   - bpf
   - internal/iana
