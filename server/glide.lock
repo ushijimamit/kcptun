@@ -1,10 +1,10 @@
 hash: 199c2919620f7260fe1c42a2f6b1051405b3dbabdb1d235e6d61a5a5b2619066
-updated: 2018-03-08T11:01:14.967570304+08:00
+updated: 2018-03-27T15:25:58.643495396+08:00
 imports:
 - name: github.com/golang/snappy
   version: 553a641470496b2327abcac10b36396bd98e45c9
 - name: github.com/klauspost/cpuid
-  version: ae832f27941af41db13bd6d8efd2493e3b22415a
+  version: 30e450625213468c7ec31fec6102dab6504adcc9
 - name: github.com/klauspost/reedsolomon
   version: 0b30fa71cc8e4e9010c9aba6d0320e2e5b163b29
 - name: github.com/pkg/errors
@@ -24,7 +24,7 @@ imports:
 - name: github.com/xtaci/smux
   version: e28719eede1ac5714cf0b06ba2f403125864ebe0
 - name: golang.org/x/crypto
-  version: 85f98707c97e11569271e4d9b3d397e079c4f4d0
+  version: 88942b9c40a4c9d203b82b3731787b672d6e809b
   subpackages:
   - blowfish
   - cast5
@@ -35,7 +35,7 @@ imports:
   - twofish
   - xtea
 - name: golang.org/x/net
-  version: 07e8617a6db2368fa55d4616f371ee1b1403c817
+  version: 6078986fec03a1dcc236c34816c71b0e05018fda
   subpackages:
   - bpf
   - internal/iana
