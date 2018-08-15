@@ -113,7 +113,6 @@ func testOpts() [][]Option {
 		{WithMaxGoroutines(5000), WithMinSplitSize(50), withSSE3(false), withAVX2(false)},
 		{WithMaxGoroutines(5000), WithMinSplitSize(500000), withSSE3(false), withAVX2(false)},
 		{WithMaxGoroutines(1), WithMinSplitSize(500000), withSSE3(false), withAVX2(false)},
-		{WithAutoGoroutines(50000), WithMinSplitSize(500)},
 	}
 	for _, o := range opts[:] {
 		if defaultOptions.useSSSE3 {
@@ -656,7 +655,7 @@ func fillRandom(p []byte) {
 }
 
 func benchmarkEncode(b *testing.B, dataShards, parityShards, shardSize int) {
-	r, err := New(dataShards, parityShards, WithAutoGoroutines(shardSize))
+	r, err := New(dataShards, parityShards)
 	if err != nil {
 		b.Fatal(err)
 	}
@@ -723,7 +722,7 @@ func BenchmarkEncode17x3x16M(b *testing.B) {
 }
 
 func benchmarkVerify(b *testing.B, dataShards, parityShards, shardSize int) {
-	r, err := New(dataShards, parityShards, WithAutoGoroutines(shardSize))
+	r, err := New(dataShards, parityShards)
 	if err != nil {
 		b.Fatal(err)
 	}
@@ -794,7 +793,7 @@ func corruptRandom(shards [][]byte, dataShards, parityShards int) {
 }
 
 func benchmarkReconstruct(b *testing.B, dataShards, parityShards, shardSize int) {
-	r, err := New(dataShards, parityShards, WithAutoGoroutines(shardSize))
+	r, err := New(dataShards, parityShards)
 	if err != nil {
 		b.Fatal(err)
 	}
@@ -874,7 +873,7 @@ func corruptRandomData(shards [][]byte, dataShards, parityShards int) {
 }
 
 func benchmarkReconstructData(b *testing.B, dataShards, parityShards, shardSize int) {
-	r, err := New(dataShards, parityShards, WithAutoGoroutines(shardSize))
+	r, err := New(dataShards, parityShards)
 	if err != nil {
 		b.Fatal(err)
 	}
@@ -940,7 +939,7 @@ func BenchmarkReconstructData10x4x16M(b *testing.B) {
 }
 
 func benchmarkReconstructP(b *testing.B, dataShards, parityShards, shardSize int) {
-	r, err := New(dataShards, parityShards, WithAutoGoroutines(shardSize))
+	r, err := New(dataShards, parityShards)
 	if err != nil {
 		b.Fatal(err)
 	}

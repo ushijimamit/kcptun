@@ -76,8 +76,6 @@ const (
 	RDTSCP                  // RDTSCP Instruction
 	CX16                    // CMPXCHG16B Instruction
 	SGX                     // Software Guard Extensions
-	IBPB                    // Indirect Branch Restricted Speculation (IBRS) and Indirect Branch Predictor Barrier (IBPB)
-	STIBP                   // Single Thread Indirect Branch Predictors
 
 	// Performance indicators
 	SSE2SLOW // SSE2 is supported, but usually not faster
@@ -133,8 +131,6 @@ var flagNames = map[Flags]string{
 	RDTSCP:      "RDTSCP",      // RDTSCP Instruction
 	CX16:        "CX16",        // CMPXCHG16B Instruction
 	SGX:         "SGX",         // Software Guard Extensions
-	IBPB:        "IBPB",        // Indirect Branch Restricted Speculation and Indirect Branch Predictor Barrier
-	STIBP:       "STIBP",       // Single Thread Indirect Branch Predictors
 
 	// Performance indicators
 	SSE2SLOW: "SSE2SLOW", // SSE2 supported, but usually not faster
@@ -858,7 +854,7 @@ func support() Flags {
 
 	// Check AVX2, AVX2 requires OS support, but BMI1/2 don't.
 	if mfi >= 7 {
-		_, ebx, ecx, edx := cpuidex(7, 0)
+		_, ebx, ecx, _ := cpuidex(7, 0)
 		if (rval&AVX) != 0 && (ebx&0x00000020) != 0 {
 			rval |= AVX2
 		}
@@ -891,12 +887,6 @@ func support() Flags {
 		}
 		if ebx&(1<<29) != 0 {
 			rval |= SHA
-		}
-		if edx&(1<<26) != 0 {
-			rval |= IBPB
-		}
-		if edx&(1<<27) != 0 {
-			rval |= STIBP
 		}
 
 		// Only detect AVX-512 features if XGETBV is supported
