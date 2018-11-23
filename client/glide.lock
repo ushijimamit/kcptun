@@ -1,12 +1,12 @@
-hash: 097c7e92e99d83731080ac757fd0be92e3511d24f5c000654b524654ccc913c1
-updated: 2018-08-22T11:37:01.555181764+08:00
+hash: 52bed5f2dcf2ea6d08e9c9c63949e7b7edcb10e978661154cc4e72fdd18fe138
+updated: 2018-11-24T01:06:27.803664246+08:00
 imports:
 - name: github.com/golang/snappy
   version: 2e65f85255dbc3072edf28d6b5b8efc472979f5a
 - name: github.com/klauspost/cpuid
-  version: ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da
+  version: e7e905edc00ea8827e58662220139109efea09db
 - name: github.com/klauspost/reedsolomon
-  version: 6bb6130ff6a76a904c1841707d65603aec9cc288
+  version: 278ba25f43b885a3fd8da55cff33fc8c6a957960
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/templexxx/cpufeat
@@ -20,15 +20,14 @@ imports:
 - name: github.com/urfave/cli
   version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 - name: github.com/xtaci/kcp-go
-  version: 86eebd5cadb519b7c9306082c7eb3bcee2c49a7b
+  version: 02d11d20c5864d980168568741c0d52a50379512
 - name: github.com/xtaci/smux
-  version: e28719eede1ac5714cf0b06ba2f403125864ebe0
+  version: 545ecee9d2a96ef4cf3c420c6b4095ac313fe870
 - name: golang.org/x/crypto
-  version: a49355c7e3f8fe157a85be2f77e6e269a0f89602
+  version: beef0f4390813b96e8e68fd78570396d0f4751fc
   subpackages:
   - blowfish
   - cast5
-  - internal/subtle
   - pbkdf2
   - salsa20
   - salsa20/salsa
@@ -36,7 +35,7 @@ imports:
   - twofish
   - xtea
 - name: golang.org/x/net
-  version: 922f4815f713f213882e8ef45e0d315b164d705c
+  version: 04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e
   subpackages:
   - bpf
   - internal/iana

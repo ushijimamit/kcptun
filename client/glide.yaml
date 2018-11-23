@@ -6,9 +6,9 @@ import:
 - package: github.com/urfave/cli
   version: ~1.20.0
 - package: github.com/xtaci/kcp-go
-  version: ~3.23.0
+  version: ~4.3.2
 - package: github.com/xtaci/smux
-  version: ~1.0.6
+  version: ~1.09
 - package: golang.org/x/crypto
   subpackages:
   - pbkdf2

@@ -523,7 +523,6 @@ func TestRandomFrame(t *testing.T) {
 	copy(buf[headerSize:], f.data)
 
 	session.conn.Write(buf)
-	t.Log(rawHeader(buf))
 	cli.Close()
 }
 
@@ -539,8 +538,6 @@ func TestReadDeadline(t *testing.T) {
 	buf := make([]byte, 10)
 	var readErr error
 	for i := 0; i < N; i++ {
-		msg := fmt.Sprintf("hello%v", i)
-		stream.Write([]byte(msg))
 		stream.SetReadDeadline(time.Now().Add(-1 * time.Minute))
 		if _, readErr = stream.Read(buf); readErr != nil {
 			break
